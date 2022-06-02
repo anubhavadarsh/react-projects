@@ -1,0 +1,17 @@
+.button {
+  width: 100%;
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 764px) {
+  .button {
+    width: auto;
+  }
+}

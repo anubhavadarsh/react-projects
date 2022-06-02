@@ -1,0 +1,10 @@
+.card {
+  margin: 1rem;
+  max-width: 50vw;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  padding: 35px;
+}

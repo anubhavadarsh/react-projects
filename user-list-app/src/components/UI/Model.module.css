@@ -1,0 +1,21 @@
+.model {
+  width: 30vw;
+}
+
+.model h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.background {
+  background: rgba(69, 69, 69, 0.571);
+}

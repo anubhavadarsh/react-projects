@@ -1,0 +1,19 @@
+.list {
+  min-width: 50vw;
+  max-height: 35vh;
+  list-style: none;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.item {
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
