@@ -23,8 +23,9 @@ const Item = (props) => {
       className={styles["item"]}
       onClick={props.handleItemClick(props.user.id)}
     >
+      <span>👉</span>
       <span>{props.user.name}</span>
-      <span>{props.user.age}</span>
+      <span>{props.user.age} years old</span>
     </li>
   );
 };

@@ -2,8 +2,7 @@ import React, { useRef, useState } from "react";
 
 import Button from "../UI/Button";
 import Card from "../UI/Card";
-import Backdrop from "../UI/Backdrop";
-import Model from "../UI/Model";
+import Modal from "../UI/Modal";
 import styles from "./UserEntry.module.css";
 
 const UserEntry = (props) => {
@@ -43,6 +42,9 @@ const UserEntry = (props) => {
       name,
       age,
     });
+
+    nameRef.current.value = "";
+    ageRef.current.value = "";
   };
 
   const handleModalClose = () => {
@@ -63,14 +65,11 @@ const UserEntry = (props) => {
         </form>
       </Card>
       {modal.showModal && (
-        <>
-          <Backdrop />
-          <Model
-            title={modal.title}
-            message={modal.message}
-            onClose={handleModalClose}
-          />
-        </>
+        <Modal
+          title={modal.title}
+          message={modal.message}
+          onClose={handleModalClose}
+        />
       )}
     </>
   );

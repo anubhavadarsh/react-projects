@@ -7,13 +7,16 @@
 }
 
 .item {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border-radius: 8px;
-  border: 1px solid white;
   padding: 10px;
   display: flex;
-  justify-content: space-around;
-  text-transform: uppercase;
   margin-bottom: 13px;
   cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.item span {
+  margin-right: 40px;
 }
