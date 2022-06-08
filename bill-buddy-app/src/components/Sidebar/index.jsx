@@ -10,12 +10,13 @@ const SideBar = ({ children }) => {
         <ProfileButton />
         {links.map((link) => (
           <PillButton
+            key={link.id}
             title={link.title}
             icon={<span className="material-icons">{link.icon}</span>}
           />
         ))}
       </aside>
-      {children}
+      <main className={styles.page}>{children}</main>
     </div>
   );
 };
