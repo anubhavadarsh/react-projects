@@ -1,11 +1,10 @@
-import SideBar from "components/Sidebar";
 import { Landing } from "components/Dashboard/index";
 
 const Dashboard = () => {
   return (
-    <SideBar>
+    <section id="dashboard" className="section">
       <Landing />
-    </SideBar>
+    </section>
   );
 };
 

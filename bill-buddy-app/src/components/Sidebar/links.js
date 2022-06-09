@@ -1,22 +1,22 @@
 export const links = [
   {
-    id: "a1",
+    id: "dashboard",
     icon: "dashboard",
     title: "dashboard",
   },
   {
-    id: "a2",
+    id: "view",
     icon: "bento",
-    title: "fundraising",
+    title: "view bills",
   },
   {
-    id: "a3",
-    icon: "calendar_today",
-    title: "Events",
+    id: "chartboard",
+    icon: "donut_small",
+    title: "visualize bills",
   },
   {
     id: "a4",
-    icon: "donut_small",
+    icon: "calendar_today",
     title: "Campaign",
   },
   {

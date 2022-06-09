@@ -21,12 +21,14 @@
     margin-right: 15px;
   }
 
-  &.active {
+  &:hover {
     background-color: #323232;
     color: white;
   }
+}
 
-  &:hover {
+a.button {
+  &--active {
     background-color: #323232;
     color: white;
   }
