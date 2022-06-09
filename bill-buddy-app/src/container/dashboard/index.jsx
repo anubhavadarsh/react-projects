@@ -1,4 +1,4 @@
-import { Landing } from "components/Dashboard/index";
+import { Landing } from "components/Dashboard";
 
 const Dashboard = () => {
   return (

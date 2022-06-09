@@ -17,7 +17,7 @@ const getSuffixDate = (number) => {
   }
 };
 
-const BillCard = ({ category, amount, date, description }) => {
+const BillCard = ({ category, amount, date, description, className }) => {
   const incomingDate = new Date(date);
 
   const dateMod = `${incomingDate.getDate()}${getSuffixDate(
@@ -27,7 +27,7 @@ const BillCard = ({ category, amount, date, description }) => {
   })}, ${incomingDate.getFullYear()}`;
 
   return (
-    <Card className={styles.bill}>
+    <Card className={clsx(styles.bill, className)}>
       <header>
         <span>{category}</span>
         <span className={clsx("material-icons", styles.icon)}>more_horiz</span>

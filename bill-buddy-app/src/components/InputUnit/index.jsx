@@ -45,7 +45,7 @@ const InputUnit = React.forwardRef(
     return (
       <div className={styles.wrapper}>
         <div className={styles.group}>
-          <span className={clsx("material-icons", styles.icon)}>{icon}</span>
+          {/* <span className={clsx("material-icons", styles.icon)}>{icon}</span> */}
           <label htmlFor={id} className={styles.label}>
             {label}
           </label>

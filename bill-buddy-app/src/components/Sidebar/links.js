@@ -15,9 +15,9 @@ export const links = [
     title: "visualize bills",
   },
   {
-    id: "a4",
+    id: "manageBills",
     icon: "calendar_today",
-    title: "Campaign",
+    title: "Manage Bills",
   },
   {
     id: "a5",
