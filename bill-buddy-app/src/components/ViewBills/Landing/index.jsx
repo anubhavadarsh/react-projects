@@ -32,6 +32,7 @@ const Landing = () => {
             .filter((bill) => bill.cat === currentCategory)
             .map((bill) => (
               <BillCard
+                id={bill.id}
                 amount={bill.amt}
                 category={bill.cat}
                 date={bill.date}
@@ -42,6 +43,7 @@ const Landing = () => {
         {currentCategory === "all" &&
           bills.map((bill) => (
             <BillCard
+              id={bill.id}
               amount={bill.amt}
               category={bill.cat}
               date={bill.date}

@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { animateScroll as scroll } from "react-scroll";
 import Card from "components/Card";
 import InputUnit from "components/InputUnit";
 import styles from "./index.module.scss";

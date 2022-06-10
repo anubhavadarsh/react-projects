@@ -49,6 +49,7 @@ const Landing = () => {
         {minBillstoPay.length > 0 &&
           minBillstoPay.map((bill) => (
             <BillCard
+              id={bill.id}
               amount={bill.amt}
               category={bill.cat}
               date={bill.date}

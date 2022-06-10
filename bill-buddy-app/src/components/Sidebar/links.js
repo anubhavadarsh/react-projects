@@ -19,14 +19,4 @@ export const links = [
     icon: "calendar_today",
     title: "Manage Bills",
   },
-  {
-    id: "a5",
-    icon: "description",
-    title: "documents",
-  },
-  {
-    id: "a6",
-    icon: "dashboard",
-    title: "settings",
-  },
 ];
