@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import MonthlyBudget from "../MonthlyBudget/index";
 import BillCard from "components/ViewBills/BillCard";
 import styles from "./index.module.scss";
-import { getPowerSet } from "utils/getPowerSet";
+import { getMinimumBills } from "utils/getMinimumBills";
 
 const Landing = () => {
   const [minBillstoPay, setMinBillsToPay] = useState([]);
@@ -13,7 +13,11 @@ const Landing = () => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      let newBills = getPowerSet(bills, bills.length, budget);
+      let newBills = getMinimumBills(bills, +budget);
+
+      if (budget === 0) {
+        setBudget("");
+      }
 
       if (newBills.length) {
         let minLen = newBills[0].length;

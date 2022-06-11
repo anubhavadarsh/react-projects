@@ -1,3 +1,11 @@
+.tag {
+  color: black;
+  font-family: var(--font-family-inter-regular);
+  font-size: 18px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
 .form {
   & input {
     border: none;

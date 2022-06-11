@@ -83,7 +83,7 @@ const ActionsOverlay = ({ onDel, onEdit }) => {
   return (
     <div className={styles["actions-overlay"]}>
       <span className={styles["icon-cont"]} onClick={onDel}>
-        <span className="material-icons">close</span>
+        <span className="material-icons">delete</span>
       </span>
       <span className={styles["icon-cont"]} onClick={onEdit}>
         <span className="material-icons">edit</span>

@@ -3,7 +3,10 @@ import clsx from "clsx";
 import styles from "./index.module.scss";
 
 const InputUnit = React.forwardRef(
-  ({ id, label, type, name, value, onChange, icon, autoFocus }, ref) => {
+  (
+    { id, label, type, name, value, onChange, icon, autoFocus, invalid },
+    ref
+  ) => {
     const inputRef = useRef();
 
     useImperativeHandle(ref, () => ({
@@ -19,7 +22,7 @@ const InputUnit = React.forwardRef(
         name={name}
         value={value}
         onChange={onChange}
-        className={styles.input}
+        className={clsx(styles.input, invalid && styles.invalid)}
         autoFocus={autoFocus}
         ref={inputRef}
       />
@@ -35,7 +38,7 @@ const InputUnit = React.forwardRef(
           onChange={onChange}
           min={0}
           step="any"
-          className={styles.input}
+          className={clsx(styles.input, invalid && styles.invalid)}
           autoFocus={autoFocus}
           ref={inputRef}
         />

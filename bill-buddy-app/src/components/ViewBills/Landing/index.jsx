@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import BillCard from "../BillCard/index";
 import styles from "./index.module.scss";
@@ -7,6 +7,10 @@ const Landing = () => {
   const [currentCategory, setCurrentCategory] = useState("all");
 
   const bills = useSelector((state) => state.bills.billsList);
+
+  useEffect(() => {
+    setCurrentCategory("all");
+  }, [bills]);
 
   const categories = [...new Set(bills.map(({ cat }) => cat))];
 
@@ -63,6 +67,7 @@ const Landing = () => {
         onChange={handleCatChange}
         value={currentCategory}
         className={styles.select}
+        defaultValue="all"
       >
         <option value="all">all</option>
         {categories.map((category) => (

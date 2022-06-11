@@ -14,6 +14,12 @@ const initialState = {
 
 const EnterBill = () => {
   const [formState, setFormState] = useState(initialState);
+  const [formInvalidState, setFormInvalidState] = useState({
+    desc: false,
+    cat: false,
+    amt: false,
+    date: false,
+  });
 
   const descRef = useRef();
   const catRef = useRef();
@@ -32,21 +38,26 @@ const EnterBill = () => {
     event.preventDefault();
 
     if (formState.desc.trim().length === 0) {
+      setFormInvalidState((prev) => ({ ...prev, desc: true }));
       descRef.current.focus();
       return;
     }
 
     if (formState.cat.trim().length === 0) {
+      setFormInvalidState((prev) => ({ ...prev, desc: false, cat: true }));
+
       catRef.current.focus();
       return;
     }
 
     if (formState.amt.trim().length === 0 || +formState.amt <= 0) {
+      setFormInvalidState((prev) => ({ ...prev, cat: false, amt: true }));
       amtRef.current.focus();
       return;
     }
 
     if (formState.date.trim().length === 0) {
+      setFormInvalidState((prev) => ({ ...prev, amt: false, date: true }));
       dateRef.current.focus();
       return;
     }
@@ -69,6 +80,13 @@ const EnterBill = () => {
       date: "",
       desc: "",
     });
+
+    setFormInvalidState({
+      amt: false,
+      cat: false,
+      date: false,
+      desc: false,
+    });
   };
 
   return (
@@ -87,6 +105,7 @@ const EnterBill = () => {
           icon="question_mark"
           autoFocus={true}
           ref={descRef}
+          invalid={formInvalidState.desc}
         />
         <InputUnit
           id="cat"
@@ -97,6 +116,7 @@ const EnterBill = () => {
           type="text"
           icon="category"
           ref={catRef}
+          invalid={formInvalidState.cat}
         />
         <InputUnit
           id="amt"
@@ -107,6 +127,7 @@ const EnterBill = () => {
           type="number"
           icon="money"
           ref={amtRef}
+          invalid={formInvalidState.amt}
         />
         <InputUnit
           id="date"
@@ -117,6 +138,7 @@ const EnterBill = () => {
           type="date"
           icon="calendar_month"
           ref={dateRef}
+          invalid={formInvalidState.date}
         />
         <div className={styles["btn-cont"]}>
           <button type="submit">submit</button>
